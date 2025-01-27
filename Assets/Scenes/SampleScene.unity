@@ -811,7 +811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPosition: {x: 0, y: 0, z: 0}
   moveDirection: {x: 1, y: 0, z: 1}
-  speed: 2
+  speed: 6
 --- !u!1 &2060996399
 GameObject:
   m_ObjectHideFlags: 0
