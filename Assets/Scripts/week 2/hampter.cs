@@ -35,7 +35,7 @@ public class hampter : MonoBehaviour
     }
     public void Rotatehamster()
     {
-        //hamster.transform.Rotate(new Vector3(0f, 0f, -90f));
+        hamster.transform.Rotate(new Vector3(0f, 0f, -90f));
 
         hamster.transform.Rotate(rotationAmount);
     }
