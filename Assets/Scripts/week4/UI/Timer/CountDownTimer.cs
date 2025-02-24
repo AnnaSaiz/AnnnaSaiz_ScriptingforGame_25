@@ -9,6 +9,9 @@ public class CountDownTimer : MonoBehaviour
 
     public TextMeshProUGUI countdownText;
 
+    public bool timerHasFinished;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,23 +23,30 @@ public class CountDownTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeRemaining > 0)
+        if(timerHasFinished == false)
         {
-            timeRemaining -= Time.deltaTime;
-            UpdateTimerUI();
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                UpdateTimerUI();
+            }
+            else
+            {
+                timerHasFinished = true;
+               
+                timeRemaining = 0;
+                UpdateTimerUI();
+
+            }
         }
-        else
-        {
-            timeRemaining = 0;
-            UpdateTimerUI();
-        }
+       
     }
 
     void UpdateTimerUI()
     {
         if(countdownText != null)
         {
-            countdownText.text = Mathf.CeilToInt(timeRemaining).ToString();
+            countdownText.text = Mathf.CeilToInt(timeRemaining).ToString("f0");
         }
     }
 }

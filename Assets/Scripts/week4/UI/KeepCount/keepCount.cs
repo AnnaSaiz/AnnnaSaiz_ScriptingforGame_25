@@ -1,12 +1,16 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem.Android;
 public class keepCount : MonoBehaviour
 {
-    public float startCount = 0;
+    public int startCount = 0;
    
     public TextMeshProUGUI Count;
 
     private float currentCount;
+
+    public bool allowCounting = true;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,16 +22,21 @@ public class keepCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (allowCounting == true)
         {
-            currentCount += 1;
-            UpdateCountDisplay();
+            if(Input.GetKeyDown(KeyCode.UpArrow))
+           {
+                currentCount += 1;
+                UpdateCountDisplay();
+            }
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+
+                currentCount -= 1;
+                UpdateCountDisplay();
+            }
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            currentCount -=1;
-            UpdateCountDisplay();
-        }
+       
     }
 
     void UpdateCountDisplay()
