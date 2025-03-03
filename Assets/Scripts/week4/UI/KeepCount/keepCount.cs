@@ -10,7 +10,7 @@ public class keepCount : MonoBehaviour
     private float currentCount;
 
     public bool allowCounting = true;
-
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,5 +42,9 @@ public class keepCount : MonoBehaviour
     void UpdateCountDisplay()
     {
         Count.text = currentCount.ToString();
+    }
+   public void stopCount()
+    {
+        allowCounting = false;
     }
 }

@@ -11,11 +11,13 @@ public class CountDownTimer : MonoBehaviour
 
     public bool timerHasFinished;
 
+    public keepCount stopCountScript;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+      
        timeRemaining = startTime;
        UpdateTimerUI();
     }
@@ -36,6 +38,8 @@ public class CountDownTimer : MonoBehaviour
                
                 timeRemaining = 0;
                 UpdateTimerUI();
+
+                stopCountScript.stopCount();
 
             }
         }
