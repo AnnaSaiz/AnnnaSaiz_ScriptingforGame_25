@@ -7,7 +7,7 @@ public class keepCount : MonoBehaviour
    
     public TextMeshProUGUI Count;
 
-    private float currentCount;
+    public float currentCount;
 
     public bool allowCounting = true;
     

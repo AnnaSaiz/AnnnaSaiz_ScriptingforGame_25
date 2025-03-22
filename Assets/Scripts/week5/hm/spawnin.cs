@@ -11,9 +11,13 @@ public int maxWests = 40;
 public Vector3 minEdge;
 public Vector3 maxEdge;
 
-public float moveSpeed = 1f;
+public float moveSpeed = .5f;
+
+  
 
 private List<MovingWest> movingWests = new List<MovingWest>();
+    private bool isMoving = true;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,10 +46,18 @@ private List<MovingWest> movingWests = new List<MovingWest>();
     // Update is called once per frame
     void Update()
     {
-        foreach (var movingWest in movingWests)
+        if (isMoving)
         {
-            movingWest.Move(moveSpeed);
+
+            foreach (var movingWest in movingWests)
+            {
+                movingWest.Move(moveSpeed);
+            }
+
+
         }
+        
+        
     }
 
     public class MovingWest
@@ -62,5 +74,26 @@ private List<MovingWest> movingWests = new List<MovingWest>();
         {
             objectToMove.transform.Translate(direction * speed * Time.deltaTime);
         }
+    }
+    public int CountingAllThemWests()
+    {
+        int youreAGhost = 0;
+
+        foreach (var movingWest in movingWests)
+        {
+            MeshRenderer renderer = movingWest.objectToMove.GetComponent<MeshRenderer>();
+            if (renderer != null && !renderer.enabled)
+            {
+                youreAGhost++;
+            }
+        }
+        Debug.Log("Active Wests (not ghosts)" + (movingWests.Count - youreAGhost));
+        return movingWests.Count - youreAGhost;
+        
+    }
+    public void StopAllWests()
+    {
+        isMoving = false;
+        Debug.Log("stop");
     }
 }
