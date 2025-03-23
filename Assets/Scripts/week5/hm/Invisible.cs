@@ -3,11 +3,14 @@ using UnityEngine;
 public class Invisible : MonoBehaviour
 {
     public float timer = 30f;
+    public SpawnIn numberr;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        numberr = FindAnyObjectByType<SpawnIn>();
+
         timernumerotwo();
     }
 
@@ -16,12 +19,17 @@ public class Invisible : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        if(timer <= 5f)
-        {
-            invisibleGo();
-            timernumerotwo();
+      if (numberr.isMoving == true)
+       {
+            if (timer <= 5f)
+            {
+                invisibleGo();
+                timernumerotwo();
 
-        }
+            }
+
+       }
+        
     }
 
     void invisibleGo()

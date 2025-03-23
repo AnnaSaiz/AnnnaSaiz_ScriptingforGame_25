@@ -12,7 +12,7 @@ public class CountDownTimer : MonoBehaviour
     public bool timerHasFinished;
 
     public keepCount stopCountScript;
-    public SpawnIn STOP;
+ 
     
 
 
@@ -37,8 +37,7 @@ public class CountDownTimer : MonoBehaviour
             else
             {
                 timerHasFinished = true;
-                STOP.StopAllWests();
-                Debug.Log("timer has finished");
+               
                
                 timeRemaining = 0;
                 UpdateTimerUI();

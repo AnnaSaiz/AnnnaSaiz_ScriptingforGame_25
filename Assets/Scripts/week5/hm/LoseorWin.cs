@@ -45,11 +45,13 @@ public class LoseorWin : MonoBehaviour
                 {
                     //display win screen
                     youWinScreen.SetActive(true);
+                    numberofWests.isMoving = false;
                 }
                 else
                 {
                     //display lose screen
                     youBigLoser.SetActive(true);
+                    numberofWests.isMoving = false;
                 }
             }
         }

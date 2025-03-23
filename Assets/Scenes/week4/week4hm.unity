@@ -1366,6 +1366,7 @@ MonoBehaviour:
   minEdge: {x: -4, y: 0.5, z: 1}
   maxEdge: {x: 4, y: 0.5, z: 6}
   moveSpeed: 1
+  isMoving: 1
 --- !u!4 &1226868115
 Transform:
   m_ObjectHideFlags: 0
@@ -1414,7 +1415,6 @@ MonoBehaviour:
   countdownText: {fileID: 820919650}
   timerHasFinished: 0
   stopCountScript: {fileID: 753922487}
-  STOP: {fileID: 1226868114}
 --- !u!4 &1400371589
 Transform:
   m_ObjectHideFlags: 0
@@ -1638,7 +1638,7 @@ Transform:
   m_GameObject: {fileID: 1519248151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.51, y: 2.12, z: 3}
+  m_LocalPosition: {x: -5.1, y: 2.12, z: 3}
   m_LocalScale: {x: 0.21912, y: 5.1074, z: 8.756068}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2071,7 +2071,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.24, z: 2.92}
-  m_LocalScale: {x: 9.552, y: 0.35689, z: 8.783293}
+  m_LocalScale: {x: 12.931499, y: 0.35689, z: 8.783293}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

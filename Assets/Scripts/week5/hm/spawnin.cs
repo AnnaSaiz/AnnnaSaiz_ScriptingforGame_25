@@ -12,11 +12,11 @@ public Vector3 minEdge;
 public Vector3 maxEdge;
 
 public float moveSpeed = .5f;
+    public bool isMoving = true;
 
-  
 
-private List<MovingWest> movingWests = new List<MovingWest>();
-    private bool isMoving = true;
+    private List<MovingWest> movingWests = new List<MovingWest>();
+   
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,7 +46,7 @@ private List<MovingWest> movingWests = new List<MovingWest>();
     // Update is called once per frame
     void Update()
     {
-        if (isMoving)
+        if (isMoving == true)
         {
 
             foreach (var movingWest in movingWests)
@@ -54,8 +54,8 @@ private List<MovingWest> movingWests = new List<MovingWest>();
                 movingWest.Move(moveSpeed);
             }
 
-
         }
+        
         
         
     }
@@ -91,9 +91,5 @@ private List<MovingWest> movingWests = new List<MovingWest>();
         return movingWests.Count - youreAGhost;
         
     }
-    public void StopAllWests()
-    {
-        isMoving = false;
-        Debug.Log("stop");
-    }
+    
 }
