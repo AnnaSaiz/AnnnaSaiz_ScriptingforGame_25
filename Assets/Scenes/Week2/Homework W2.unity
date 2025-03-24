@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &16495082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1750,9 +1750,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf0332c59f9ab546b2c67a01f3bef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonOne: {fileID: 0}
-  buttonTwo: {fileID: 0}
-  buttonHasBeenPressed: 0
+  buttonOne: {fileID: 823294270}
+  buttonTwo: {fileID: 263419066}
+  buttonOneHasBeenPressed: 0
+  buttonTwoHasBeenPressed: 0
 --- !u!4 &1664901874
 Transform:
   m_ObjectHideFlags: 0
