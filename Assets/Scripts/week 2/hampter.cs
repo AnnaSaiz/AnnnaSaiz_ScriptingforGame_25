@@ -8,6 +8,8 @@ public class hampter : MonoBehaviour
     public Vector3 rotationAmount;
     public GameObject sadHamster;
 
+    public Buttons press;
+
     public bool buttonPressed = false;
 
 
@@ -20,10 +22,15 @@ public class hampter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject.FindGameObjectWithTag("button");
+        
         
         sadHamster.transform.Rotate(0, 90 * Time.deltaTime, 0);
-        hamster.transform.localScale += Vector3.one * scaleIncrease * Time.deltaTime;
+
+        
+        
+           hamster.transform.localScale += Vector3.one * scaleIncrease * Time.deltaTime;
+        
+        
         
         
         if(hamster.transform.localScale.x > 15)
@@ -34,21 +41,12 @@ public class hampter : MonoBehaviour
         
 
     }
-    public bool buttonOneHasBeenPressed()
-    {
-        sadHamster.SetActive(false);
-        return buttonPressed;
-        
-
-
-    }
-    public void buttonTwoHasBeenPressed()
-    {
-        
-    }
-    public void TeleportHamster()
+    public void buttonOneHasBeenPressed()
     {
 
-    }
+       buttonPressed = true;
+       
 
+    }
+   
 }

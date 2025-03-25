@@ -143,10 +143,7 @@ public class notes : MonoBehaviour
 // if( variable.otherScriptFunction == true) -- reference variable from other script
 
 
-//MIDTERM
-//-------
 
-//
 
 
 
