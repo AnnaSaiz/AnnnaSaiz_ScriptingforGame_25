@@ -142,6 +142,17 @@ public class notes : MonoBehaviour
 
 // if( variable.otherScriptFunction == true) -- reference variable from other script
 
+//WEEK 9  3/31
+//-------
+
+//INHERITENCE
+//--------
+
+//just need to assign most specific script to unity gameobject
+//(assign dog script to dog)
+
+//
+
 
 
 
