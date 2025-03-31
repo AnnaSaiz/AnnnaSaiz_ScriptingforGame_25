@@ -13,14 +13,5 @@ public class MelleEnemy : Enemy
         Player = GameObject.FindWithTag("player");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-      if(Vector3.Distance(this.transform.position, Player.transform.position) ,< attackRange) 
-        {
-            Attack();
-        }
-           
-       
-    }
+  
 }
