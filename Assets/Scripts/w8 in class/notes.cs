@@ -90,6 +90,9 @@ public class notes : MonoBehaviour
 //OnTriggerEnter() - Runs when an object with a rigidbody collides with a collider marked as a trigger
 //OnCollisionEnter() - Smae as above but not marked as trigger
 // RayCast - Ray - looksie loo
+// if(Physics.Raycast(this.transform.position,
+//
+//LookAt - LookAt(player.transform.position) have something face the player
 
 //LISTS
 //--------
@@ -151,7 +154,25 @@ public class notes : MonoBehaviour
 //just need to assign most specific script to unity gameobject
 //(assign dog script to dog)
 
+//NAVMESH
+//--------
+
+//patrol paths
+
+//GameObject - AI - NavMeshSurface - then bake
+//add NavMesh agent
 //
+//bake walls into navmesh so guys dont go through walls
+//using distance to set attack range of enemys 
+//SetDestination
+//
+//
+
+//DIRECTION BETWEEN THINGS
+//Vector3 dir;
+//Vector3 dir = player.transform.position - this.transform.position;
+//dir.Normalized();
+
 
 
 

@@ -1,3 +1,4 @@
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -12,23 +13,38 @@ public class Enemy : MonoBehaviour
 
     private float attackTimer;
 
+    protected UnityEngine.AI.NavMeshAgent navAgent;
 
     protected virtual void Update()
     {
-        if(Vector3.Distance(this.transform.position, player.transform.position) < attackRange)
+        if (navAgent.remainingDistance > attackRange)
+        {
+            navAgent.SetDistance(player.transform.position);
+            navAgent.isStopped = false;
+        }
+        else
+        {
+            navAgent.isStopped = true;
+        }
+
+
+
+
+        if (Vector3.Distance(this.transform.position, player.transform.position) < attackRange)
         {
             attackTimer += Time.deltaTime;
-            if(attackTimer > attackSpeed)
+            if (attackTimer > attackSpeed)
             {
                 Attack();
                 attackTimer = 0;
             }
-           
+
         }
     }
     protected virtual void Start()
     {
         player = FindAnyObjectByType<Player>();
+        navAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
     protected virtual void Attack()
     {
