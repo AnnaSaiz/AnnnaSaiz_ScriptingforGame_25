@@ -5,12 +5,12 @@ public class hampter : MonoBehaviour
     public GameObject hamster;
     public float scaleIncrease = 3f;
     public GameObject youdiedscreen;
-    public Vector3 rotationAmount;
+  
     public GameObject sadHamster;
 
     public Buttons press;
 
-    public bool buttonPressed = false;
+   
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -41,12 +41,7 @@ public class hampter : MonoBehaviour
         
 
     }
-    public void buttonOneHasBeenPressed()
-    {
-
-       buttonPressed = true;
-       
-
-    }
+    
    
+  
 }
